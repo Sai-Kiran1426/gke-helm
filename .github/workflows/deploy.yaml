@@ -40,7 +40,9 @@ jobs:
         project_id: "gcp-test-472411"
 
     - name: Install Helm
-      uses: azure/setup-helm@v4
+        uses: helm/actions/setup-helm@v3
+        with:
+          version: v3.14.0
 
     - name: Deploy via Helm
       run: |
