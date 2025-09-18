@@ -40,13 +40,13 @@ jobs:
         project_id: "gcp-test-472411"
 
     - name: Install Helm
-      uses: deliverybot/helm@v1
+      run: |
+        curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
 
     - name: Deploy via Helm
       run: |
         helm upgrade --install python-app ./python-app \
           --set image.repository=us-central1-docker.pkg.dev/gcp-test-472411/repo1/python-app \
-          --set image.tag=latest \
           --set image.tag=latest \
           --namespace default
 
