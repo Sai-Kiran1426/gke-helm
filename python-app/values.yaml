@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: us-central1-docker.pkg.dev/gcp-test-472411/repo1/python-app
-  tag: "latest"
+  tag: "@sha256:cc8d94f724483830405db33c6ee08e541fe33ed1c39ceab315854a74abace0c0"
   pullPolicy: IfNotPresent
 
 resources:
